@@ -1,0 +1,16 @@
+<!-- images.html -->
+{% extends "template.html" %}
+{% block body %}
+<h2>Input Images here!</h2>
+<p>The images will be passed on to the stylization process from here</p>
+
+<form action="/process" method="POST" enctype="multipart/form-data" id="imageForm">
+    <label for="image1">Select Image 1:</label>
+    <input type="file" name="image1" id="image1" accept="image/*" class="form-feild" required><br>
+
+    <label for="image2">Select Image 2:</label>
+    <input type="file" name="image2" id="image2" accept="image/*" class="form-feild" required><br>
+
+    <button type="button" id="processButton" class="add-btn">Process Images</button>
+</form>
+{% endblock %}

@@ -13,12 +13,13 @@ The architecture used in the model is based on the following principles:
 The model leverages pre-trained CNNs (like VGG-19 or similar) to extract content and style features from the input images. These networks are trained on large datasets (like ImageNet) and are known to capture hierarchical features (edges, textures, patterns) from images.
 
 Content Features: These are derived from deeper layers of the CNN where the network encodes the semantic structure of the image (such as objects and shapes).
-Style Features: Style features are extracted from earlier layers of the CNN. These layers capture lower-level textures, patterns, and colors present in the style image.<br/>
+Style Features: Style features are extracted from earlier layers of the CNN. These layers capture lower-level textures, patterns, and colors present in the style image.<br/><br/>
 **2. Gram Matrix for Style Representation**
 To represent the style of an image, the model calculates a Gram matrix from the feature maps extracted by the CNN:<br/>
 
 The Gram matrix computes the correlations between different feature maps of the style image, capturing the textures and patterns present.
 This matrix essentially captures the relationships between different channels of the feature maps, representing the style without relying on the spatial arrangement of pixels.<br/>
+<br/>
 **3. Transformation Network (Feed-forward Network)**
 The core of the model is a feed-forward network that takes the content and style features as inputs and outputs a stylized image. This network is typically composed of convolutional layers that apply non-linear transformations to the content image based on the style image features.<br/>
 
@@ -45,5 +46,3 @@ The model is trained using pairs of content and style images, and it learns to c
 
 Once trained, the model can generalize to arbitrary content and style images, meaning it can be applied to any new pair of images for real-time style transfer.
 
-## Arbitrary Style Transfer Architecture
-Unlike earlier methods that required re-training for each style image, the model you are using achieves arbitrary style transfer. This is done by decoupling the content and style representations and allowing the model to transfer any style to any content image without needing re-training for new styles.

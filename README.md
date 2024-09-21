@@ -12,7 +12,7 @@ The architecture used in the model is based on the following principles:
 **1. Feature Extraction Using a Pre-trained CNN (VGG-based Network)**<br/>
 The model leverages pre-trained CNNs (like VGG-19 or similar) to extract content and style features from the input images. These networks are trained on large datasets (like ImageNet) and are known to capture hierarchical features (edges, textures, patterns) from images.
 
-Content Features: These are derived from deeper layers of the CNN where the network encodes the semantic structure of the image (such as objects and shapes).
+Content Features: These are derived from deeper layers of the CNN where the network encodes the semantic structure of the image (such as objects and shapes).<br/>
 Style Features: Style features are extracted from earlier layers of the CNN. These layers capture lower-level textures, patterns, and colors present in the style image.<br/><br/>
 **2. Gram Matrix for Style Representation**<br/>
 To represent the style of an image, the model calculates a Gram matrix from the feature maps extracted by the CNN:<br/>
